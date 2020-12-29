@@ -1,0 +1,37 @@
+\documentclass[12pt]{article}
+
+%Packages BEGIN
+
+%Packages END
+
+\title{Data Structures PA2}
+\author{{\scriptsize B07202020}\\Hao-Chien Wang}
+
+\begin{document}
+\maketitle
+
+\section{Usage}%
+Use \texttt{python ./hash.py <password file>} to create \texttt{./Dictionary.txt}.
+Then, use \texttt{python ./search.py} to search the hash values in 
+\texttt{./list\_pa2.txt} and write the results in \texttt{./results\_pa2.txt}.
+Alternatively, use \texttt{python ./manual\_search.py} to search one by one.
+
+\section{Code Structure}%
+
+The code generating the dictionary is written in \texttt{./hash.py}, and the
+code to search for a given hash value is defined in \texttt{./search.py}.
+\texttt{./manual\_search.py} imports the function defined in \texttt{./search.py}
+to perform the same functionality.
+
+\section{Data Structures and Algorithms}%
+
+The algorithm used in this program is straightforward. In \texttt{./hash.py},
+passwords are read one by one, the hash value is calculated for each salt and
+written to the output file. In \texttt{./search.py}, the aforementioned output
+file is read and a table consist of password, salt and hash values is created 
+(in the form of Python lists). For each hash values, linear search is performed
+on the table and the output is written. In \texttt{./manual\_search.py}, 
+the same procedure is performed, but on the input read from commandline instead
+of a file.
+
+\end{document}
